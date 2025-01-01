@@ -1,0 +1,164 @@
+<html lang="tr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   İletişim - Duppo Kafe
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <a class="text-white text-2xl font-bold" href="#">
+     Duppo Kafe
+    </a>
+    <div>
+     <a class="text-gray-300 hover:text-white mx-2" href="index.html">
+      Ana Sayfa
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="hakkimizda.html">
+      Hakkımızda
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="menu.html">
+      Menü
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="iletisim.html">
+      İletişim
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="basvuru.html">
+      Basvuru Formu
+     </a>
+    </div>
+   </div>
+  </nav>
+  <!-- Contact Section -->
+  <section class="py-12">
+   <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">
+     İletişim
+    </h2>
+    <div class="flex flex-wrap">
+     <div class="w-full md:w-1/2 p-4">
+      <form id="contactForm">
+       <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+         Adınız
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" required="" type="text"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+         E-posta
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" required="" type="email"/>
+       </div>
+       <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+         Mesajınız
+        </label>
+        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" required="" rows="4">
+        </textarea>
+       </div>
+       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+        Gönder
+       </button>
+      </form>
+     </div>
+     <div class="w-full md:w-1/2 p-4">
+      <h5 class="text-xl font-bold mb-2">
+       Adres
+      </h5>
+      <p class="mb-4">
+       123 Kahve Sokak, İstanbul, Türkiye
+      </p>
+      <h5 class="text-xl font-bold mb-2">
+       Telefon
+      </h5>
+      <p class="mb-4">
+       +90 123 456 7890
+      </p>
+      <h5 class="text-xl font-bold mb-2">
+       E-posta
+      </h5>
+      <p class="mb-4">
+       info@duppokafe.com
+      </p>
+      <div id="map" class="w-full h-64 bg-gray-300">
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer text-center">
+   <div class="container mx-auto">
+    <p>
+     © 2023 Duppo Kafe. Tüm hakları saklıdır.
+    </p>
+    <div class="mt-4">
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Interactive JS code for form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Mesajınız gönderildi!');
+        });
+
+        // Interactive JS code for map
+        function initMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(41.0082, 28.9784),
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+
+        // Load Google Maps script dynamically
+        function loadScript() {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap";
+            document.body.appendChild(script);
+        }
+
+        window.onload = loadScript;
+  </script>
+ </body>
+</html>

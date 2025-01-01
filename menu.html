@@ -1,0 +1,183 @@
+<html lang="tr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Menü - Duppo Kafe
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <a class="text-white text-2xl font-bold" href="#">
+     Duppo Kafe
+    </a>
+    <div>
+     <a class="text-gray-300 hover:text-white mx-2" href="index.html">
+      Ana Sayfa
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="hakkimizda.html">
+      Hakkımızda
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="menu.html">
+      Menü
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="iletisim.html">
+      İletişim
+     </a>
+     <a class="text-gray-300 hover:text-white mx-2" href="basvuru.html">
+      Basvuru Formu
+     </a>
+    </div>
+   </div>
+  </nav>
+  <!-- Menu Section -->
+  <section class="py-12 bg-gray-100">
+   <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">
+     Menü
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+     <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+      <img alt="A cup of espresso with a rich crema on top, placed on a saucer with a spoon." class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/Dy8bnoMLN55rIJFS9ea3RofzfvxwikpuUixyfdWEZM16sDDQB.jpg"/>
+      <div class="p-4">
+       <h3 class="text-xl font-bold mb-2">
+        Espresso
+       </h3>
+       <p class="text-gray-700">
+        Yoğun ve aromatik bir kahve deneyimi.
+       </p>
+       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart('Espresso')">
+        Sepete Ekle
+       </button>
+      </div>
+     </div>
+     <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+      <img alt="A tall glass of iced latte with layers of milk and coffee, topped with ice cubes." class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/scxlp89JwmJIC1JUIe5p67QQ2zM8vL2pCCENXG36r07qdYAKA.jpg"/>
+      <div class="p-4">
+       <h3 class="text-xl font-bold mb-2">
+        Iced Latte
+       </h3>
+       <p class="text-gray-700">
+        Serinletici ve ferahlatıcı bir kahve seçeneği.
+       </p>
+       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart('Iced Latte')">
+        Sepete Ekle
+       </button>
+      </div>
+     </div>
+     <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+      <img alt="A cup of cappuccino with a thick layer of frothy milk, sprinkled with cocoa powder." class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/T2OSiWsMGSpTBxGJdScFtffqftxOecvyOf6GBKCK5qySZHGgC.jpg"/>
+      <div class="p-4">
+       <h3 class="text-xl font-bold mb-2">
+        Cappuccino
+       </h3>
+       <p class="text-gray-700">
+        Köpüklü ve lezzetli bir kahve keyfi.
+       </p>
+       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart('Cappuccino')">
+        Sepete Ekle
+       </button>
+      </div>
+     </div>
+     <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+      <img alt="A cup of black coffee with steam rising, placed on a wooden table." class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/hDY0VanOT4ZkN5PbHbJIqOSmTlJNweYwP6pL9gvskFtndYAKA.jpg"/>
+      <div class="p-4">
+       <h3 class="text-xl font-bold mb-2">
+        Americano
+       </h3>
+       <p class="text-gray-700">
+        Sade ve güçlü bir kahve tadı.
+       </p>
+       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart('Americano')">
+        Sepete Ekle
+       </button>
+      </div>
+     </div>
+     <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+      <img alt="A cup of mocha with whipped cream on top, drizzled with chocolate syrup." class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/stwHjIRsi36DLFkEtFbnjE85GX38L1GvfZG6C9jNIbImdYAKA.jpg"/>
+      <div class="p-4">
+       <h3 class="text-xl font-bold mb-2">
+        Mocha
+       </h3>
+       <p class="text-gray-700">
+        Çikolata ve kahvenin mükemmel uyumu.
+       </p>
+       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart('Mocha')">
+        Sepete Ekle
+       </button>
+      </div>
+     </div>
+     <div class="card bg-white shadow-md rounded-lg overflow-hidden">
+      <img alt="A cup of flat white with a smooth layer of microfoam on top." class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/yswfmqzpgfo0Z0pFkXlOX84f5Jssu6S37T7jUbc3Nozj2hBoA.jpg"/>
+      <div class="p-4">
+       <h3 class="text-xl font-bold mb-2">
+        Flat White
+       </h3>
+       <p class="text-gray-700">
+        Yumuşak ve dengeli bir kahve deneyimi.
+       </p>
+       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="addToCart('Flat White')">
+        Sepete Ekle
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer text-center">
+   <div class="container mx-auto">
+    <p>
+     © 2023 Duppo Kafe. Tüm hakları saklıdır.
+    </p>
+    <div class="mt-4">
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-instagram">
+      </i>
+     </a>
+     <a class="text-white mx-2" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Interactive JS code for adding items to cart
+        function addToCart(item) {
+            alert(item + ' sepete eklendi!');
+        }
+  </script>
+ </body>
+</html>
